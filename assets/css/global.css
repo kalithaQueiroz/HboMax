@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Colors RGB*/
+    --primary-color: #020228;
+    --secundary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --text-color: #ffffff;
+    --link-color: #9e86ff;
+    --btn-link-bg-color: #ffffff;
+    --btn-link-color: #000000;
+
+    /* Colors RGBA*/
+    --form-error: rgba(255, 76, 76);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-placeholder: rgba(255, 255, 255, 0.7);
+
+    /* Gradients */
+    --index-bg: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    --btn-bg-color-gradient: linear-gradient(45deg, #9b34ef 0%, #490cb0 20%, transparent 50%);
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg, #5516ba, rgba(255, 0, 229, 0.5)80%);
+
+    /* BORDER */
+    --border-color-one: 1px solid #b535f6;
+    --border-color-two: 1px solid #ffffff;
+    --border-form: 1px solid rgba(255, 255, 255, 0.7);
+
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+p {
+    font-family: "Quicksand", sans-serif;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Navbar  */
+
+.nav-bar {
+    width: 100%;
+    padding: 12px 16px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-color);
+    z-index: 1;
+}
+
+.nav-bar-logo {
+    max-width: 160px;
+}
+
+.nav-bar-logo-image {
+    width: 100%;
+}
+
+/* Buttom */
+
+.btn-geral {
+    padding: 16px 40px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: 1s;
+    background-size: 250%;
+}
+
+.btn-gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secundary-color);
+    transform: scale(1.05);
+}
+
+/* Navbar */
+
+.btn-comein {
+    padding: 8px 26px;
+    transition: 1s;
+    border-radius: 500px;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    margin-right: 24px;
+    background-color: transparent;
+}
+
+.btn-comein:hover {
+    transition: 1s;
+    outline: 1px solid var(--secundary-color);
+}
+
+.btn-tosign {
+    padding: 8px 26px;
+    transition: 1s;
+    border-radius: 500px;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    background-color: var(--tertiary-color);
+    border: var(--border-color-one);
+}
+
+.btn-tosign:hover {
+    background-color: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+    border: var(--border-color-two);
+}
+
+/* FOOTER */
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.footer-link {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 14px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    font-size: 0.875rem;
+}
+
+.footer-link:hover {
+    color: var(--text-color);
+}
+
+.footer-legal {
+    font-size: 0.75rem;
+    margin: 16px 0;
+    color: var(--link-color);
+    font-weight: 300;
+}
+
+.footer-redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+    section {
+        scroll-margin-top: 120px;
+    }
+
+    .nav-bar {
+        padding: 32px 24px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .nav-bar-logo {
+        max-width: 100px;
+    }
+
+    .btn-tosign {
+        margin: 0;
+    }
+
+    .header {
+        margin-top: 128px !important;
+    }
+
+    .footer-link {
+        display: block;
+        margin-bottom: 16px;
+    }
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secundary-color);
+}
