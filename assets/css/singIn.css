@@ -1,0 +1,91 @@
+@import url("global.css");
+
+.body-singin {
+    background-image: url(../images/background-movies-series.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+}
+
+.nav-bar {
+    position: relative;
+}
+
+.login {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--form-bg-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+}
+
+.main-title {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.main-question {
+    text-align: left;
+}
+
+.login-field {
+    background: var(--form-bg-color);
+    border: var(--border-form);
+    border-radius: 8px;
+    color: var(--text-color);
+    padding: 16px;
+    font-size: 1rem;
+}
+
+.login-field::placeholder {
+    color: var(--form-placeholder);
+}
+
+.login-field:invalid {
+    border-color: var(--form-error);
+}
+
+.main-actions {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.login-link {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: bold;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 400px) {
+    body {
+        height: auto;
+    }
+
+    .main-actions .btn-geral{
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    .login-link {
+        margin: 0;
+    }
+}
